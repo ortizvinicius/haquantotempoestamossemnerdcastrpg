@@ -20,27 +20,34 @@
     width: 100%;
     height: 100%;
   }
+  .box {
+    width: 50%;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    paddding: 30px 15px;
+  }
 </style>
   </head>
   <body>
     <h2>Estamos há</h2>
     <h1><span id=dias>365</span> dias, <span id=horas>23</span> horas, <span id=minutos>2 minutos</span> e <span id=segundos>30</span> segundos</h1>
-    <h2>Sem Nerdcast de RPG</h2><br><br>
+    <h2>Sem Nerdcast de RPG</h2>
     
-    <div style="clear:both"></div>
+    <div class="clearfix"></div>
     
-    <div style="width:50%;float:left">
+    <div class="box pull-left">
       <h4>Nosso recorde mínimo é de</h4>
       <h3>365 dias, 23 horas, 2 minutos e 10 segundos</h3>
     </div>
-    <div style="width:50%;float:right">
+    <div class="box pull-right">
       <h4>Nosso recorde máximo é de</h4>
       <h3>365 dias, 23 horas, 2 minutos e 10 segundos</h3>
     </div>
     
-    <div style="clear:both"></div>
+    <div class="clearfix"></div>
     
-    <h2><br><br>O próximo Nerdcast é previsto para:</h2>
+    <h2>O próximo Nerdcast é previsto para:</h2>
     <h1><span id=dias2>365</span> dias, <span id=horas2>23</span> horas, <span id=minutos2>2 minutos</span> e <span id=segundos2>30</span> segundos</h1>
     
     <!-- Optional JavaScript -->
