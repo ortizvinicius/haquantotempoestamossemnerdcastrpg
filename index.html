@@ -53,7 +53,7 @@
     
     <div class="clearfix"></div>
     
-    <h2>O próximo Nerdcast é previsto para:</h2>
+    <h2>O próximo Nerdcast é previsto para daqui:</h2>
     <h1><span id=dias2></span> dias, <span id=horas2></span> horas, <span id=minutos2></span> minutos e <span id=segundos2></span> segundos</h1>
     
     <!-- Optional JavaScript -->
@@ -85,8 +85,8 @@
     });
      $(function(){
       var calcFutNdc = setInterval(function(){
-        date_future = new Date();
-        date_now = new Date("January 12, 2018 11:00:00");
+        date_future = new Date("January 12, 2018 11:00:00");
+        date_now = new Date();
 
         seconds = Math.floor((date_future - (date_now))/1000);
         minutes = Math.floor(seconds/60);
