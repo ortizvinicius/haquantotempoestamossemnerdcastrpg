@@ -36,12 +36,15 @@
 </style>
   </head>
   <body>
-    <h2>Estamos há</h2>
+    <h2>Estamos a</h2>
     <h1><span id=dias></span> dias, <span id=horas></span> horas, <span id=minutos></span> minutos e <span id=segundos></span> segundos</h1>
     <h2>Sem um novo Nerdcast de RPG</h2><br><br>
    
     <h2>O próximo Nerdcast de RPG é previsto para daqui</h2>
     <h1><span id=dias2></span> dias, <span id=horas2></span> horas, <span id=minutos2></span> minutos e <span id=segundos2></span> segundos</h1>
+    
+    <h2>Ou pra quem tem o APP/grupo secreto do Patreon</h2>
+    <h1><span id=dias3></span> dias, <span id=horas3></span> horas, <span id=minutos3></span> minutos e <span id=segundos3></span> segundos</h1>
     
     <div class="box float-left">
       <h4>Nosso recorde mínimo é de</h4>
@@ -80,7 +83,7 @@
       },1000);
       
     });
-     $(function(){
+    $(function(){
       var calcFutNdc = setInterval(function(){
         date_future = new Date("January 12, 2018 11:00:00");
         date_now = new Date();
@@ -98,7 +101,26 @@
         $("#horas2").html(hours);
         $("#minutos2").html(minutes);
         $("#segundos2").html(seconds);
-      },1000);
+     },1000);
+    $(function(){
+      var calcFutNdc = setInterval(function(){
+        date_future = new Date("January 12, 2018 00:00:00");
+        date_now = new Date();
+
+        seconds = Math.floor((date_future - (date_now))/1000);
+        minutes = Math.floor(seconds/60);
+        hours = Math.floor(minutes/60);
+        days = Math.floor(hours/24);
+        
+        hours = hours-(days*24);
+        minutes = minutes-(days*24*60)-(hours*60);
+        seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+
+        $("#dias3").html(days);
+        $("#horas3").html(hours);
+        $("#minutos3").html(minutes);
+        $("#segundos3").html(seconds);
+     },1000);
       
     });
     </script>
